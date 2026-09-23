@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Code</title>
+</head>
+<body>
+    <button onclick="multiply(4)">Click Me!</button>
+    <p id="result"></p>
+
+    <script>
+        function multiply(a, b = 5) {  // set default value of b as 5
+            let result = a * b;
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
