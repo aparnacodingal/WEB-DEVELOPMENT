@@ -1,0 +1,28 @@
+<html>
+<body>
+    <center>
+<section>
+  <img class="mySlides" src="https://images.pexels.com/photos/479386/pexels-photo-479386.jpeg" style="height:600px">
+  <img class="mySlides" src="https://images.pexels.com/photos/18023668/pexels-photo-18023668.jpeg" style="height:600px">
+  <img class="mySlides" src="https://images.pexels.com/photos/40053623/pexels-photo-40053623.jpeg" style="height:600px">
+</section>
+</center>
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+</body>
+</html>

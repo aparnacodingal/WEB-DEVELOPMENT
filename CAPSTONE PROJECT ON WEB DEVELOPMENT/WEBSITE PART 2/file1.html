@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>🍕 Fun Pizza Party! 🍕</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Fredoka', cursive, sans-serif; }
+    </style>
+</head>
+<body class="bg-yellow-50 text-stone-800">
+
+    <!-- Header / Navbar -->
+    <header class="bg-amber-400 shadow-md sticky top-0 z-50 p-4 flex justify-between items-center max-w-4xl mx-auto rounded-b-2xl">
+        <h1 class="text-2xl font-bold text-red-600 flex items-center gap-2">🍕 Pizza Land!</h1>
+        <nav class="space-x-4 font-semibold text-stone-700">
+            <a href="#menu" class="hover:text-red-600 transition">Yummy Menu</a>
+            <a href="#fun" class="hover:text-red-600 transition">Fun Fact</a>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <main class="max-w-4xl mx-auto p-6 text-center space-y-6">
+        <div class="bg-red-500 text-white p-8 rounded-3xl shadow-lg mt-6">
+            <h2 class="text-4xl font-bold mb-2">Welcome to the Ultimate Pizza Party! 🎉</h2>
+            <p class="text-lg opacity-90">Crunchy crust, gooey cheese, and tons of delicious fun!</p>
+            <button onclick="orderPizza()" class="mt-4 bg-yellow-300 hover:bg-yellow-400 text-stone-900 font-bold px-6 py-3 rounded-full shadow-md text-lg transition transform hover:scale-105">
+                Order a Magic Slice!❤️
+            </button>
+            <p id="order-msg" class="mt-3 font-semibold text-yellow-200 h-6"></p>
+        </div>
+
+        <!-- Pizza Menu Grid -->
+        <section id="menu" class="py-6">
+            <h3 class="text-3xl font-bold text-amber-600 mb-6">Choose Your Favorite! 😋</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-3xl shadow-md border-4 border-amber-300 hover:rotate-2 transition transform">
+                    <div class="text-6xl mb-3">🧀</div>
+                    <h4 class="text-xl font-bold text-red-500">Super Cheese</h4>
+                    <p class="text-sm text-stone-600 mt-1">Extra melted mozzarella & gooey goodness!</p>
+                    <span class="inline-block mt-4 bg-amber-100 text-amber-800 font-bold px-3 py-1 rounded-full">$5.00</span>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-md border-4 border-red-300 hover:-rotate-2 transition transform">
+                    <div class="text-6xl mb-3">🍄</div>
+                    <h4 class="text-xl font-bold text-red-500">Mushroom Magic</h4>
+                    <p class="text-sm text-stone-600 mt-1">Juicy mushrooms dancing on tomato sauce!</p>
+                    <span class="inline-block mt-4 bg-amber-100 text-amber-800 font-bold px-3 py-1 rounded-full">$6.00</span>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-md border-4 border-yellow-300 hover:rotate-2 transition transform">
+                    <div class="text-6xl mb-3">🍍</div>
+                    <h4 class="text-xl font-bold text-red-500">Pineapple Party</h4>
+                    <p class="text-sm text-stone-600 mt-1">Sweet pineapple chunks and melted cheese!</p>
+                    <span class="inline-block mt-4 bg-amber-100 text-amber-800 font-bold px-3 py-1 rounded-full">$6.50</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Fact Section -->
+        <section id="fun" class="bg-amber-200 p-6 rounded-3xl shadow-md my-8">
+            <h3 class="text-2xl font-bold text-stone-800 mb-2">🧠 Did You Know?</h3>
+            <p class="text-stone-700">The world's largest pizza was over 13,000 square feet! That's bigger than a basketball court! 🏀🍕</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-white text-center py-6 mt-12 rounded-t-3xl">
+        <p class="font-medium">Made with ❤️ and lots of cheese for kids everywhere!</p>
+        <p class="text-xs text-stone-400 mt-1">&copy; 2026 Pizza Land Playground</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function orderPizza() {
+            const messages = [
+                "✨ Poof! A magic cheese pizza is on its way!",
+                "🚀 Zoom! Your pepperoni rocket is flying to you!",
+                "🎉 Yay! The pizza chef baked an extra slice just for you!"
+            ];
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('order-msg').textContent = randomMsg;
+        }
+    </script>
+</body>
+</html>
